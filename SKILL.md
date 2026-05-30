@@ -1,7 +1,7 @@
 ---
 name: "bucketgit-skills"
 description: "BucketGit skill pack for agents using bgit repositories, broker administration, task boards, pull requests, CI/CD, and multi-agent collaboration. Use when working with BucketGit/bgit workflows from ordinary repository creation through broker operations."
-version: 0.1.0
+version: 0.1.1
 author: BucketGit
 license: MIT
 tags:
@@ -26,6 +26,7 @@ that matches the current task.
 |-------|--------|---------|----------|
 | Installer | `installer/` | Cross-platform setup helper | Installing or updating the `bgit` binary on macOS, Linux, or Windows |
 | Broker Bootstrapper | `broker-bootstrapper/` | First-time cloud deploy guide | Bootstrapping a BucketGit broker on AWS or GCP |
+| Local Broker Operator | `local-broker-operator/` | Local-first repo operator | Using in-process local brokers, local filesystem repos, local-broker-backed S3/GCS repos, storage-backed ref safeguards, and local recovery |
 | Repository Starter | `repo-starter/` | Practical repo onboarding guide | Creating, attaching, cloning, or checking a BucketGit repository |
 | Broker Administrator | `broker-administrator/` | Cloud-aware broker operator | Managing brokers, teams, users, keys, access, protection, and upgrades |
 | Bucket Recovery Operator | `bucket-recovery-operator/` | Low-level recovery specialist | Inspecting or repairing direct bucket/object-storage repository state |
@@ -37,6 +38,8 @@ that matches the current task.
 
 - Prefer broker-backed workflows. Use `bgit direct` only for recovery, repair,
   migration, or low-level inspection.
+- For local broker work, use the in-process broker path and storage-backed
+  broker state; do not require a long-lived localhost broker.
 - Treat broker metadata as authoritative for users, roles, task-board stories,
   pull requests, issues, branch protection, and CI run records.
 - Before changing access, refs, or broker infrastructure, identify the current

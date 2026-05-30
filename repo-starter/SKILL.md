@@ -17,9 +17,11 @@ right broker profile, team, repository, branch, and SSH identity.
 3. Attach a local checkout interactively with `bgit init`, or script it with
    `bgit init --noninteractive --repo REPO --profile PROFILE[.REGION] --team TEAM`.
 4. Clone existing repositories with `bgit clone URL [directory]`.
-5. Use normal Git-compatible local work: `bgit add`, `bgit commit`, `bgit push`,
+5. If the URL is `file://`, `s3://`, or `gs://`, switch to the local broker
+   skill before giving storage-specific advice.
+6. Use normal Git-compatible local work: `bgit add`, `bgit commit`, `bgit push`,
    `bgit pull`, `bgit branch`, `bgit checkout`, `bgit status`, `bgit log`.
-6. If a broker rejects a request as incompatible, upgrade the broker with
+7. If a broker rejects a request as incompatible, upgrade the broker with
    `bgit admin broker upgrade` from a repo configured for that broker.
 
 ## References

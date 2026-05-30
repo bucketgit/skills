@@ -4,7 +4,7 @@
 
 ```bash
 bgit setup
-bgit repos
+bgit repos mine
 ```
 
 Inspect `~/.bgit/config.yaml` only when needed to confirm profile, region, and

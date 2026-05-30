@@ -22,6 +22,14 @@ fresh greenfield flow should select the team first and then the repository.
 
 ## Clone
 
+For local broker storage URIs, use the local broker skill:
+
+```bash
+bgit clone file://app.git
+bgit clone s3://app.git --profile work --region eu-west-1
+bgit clone gs://app.git --profile work --region europe-west1
+```
+
 Flat broker URLs use the default `core` team:
 
 ```bash
@@ -39,7 +47,7 @@ bgit clone https://broker.example.com/core/app/app.git ./app
 
 ```bash
 bgit whoami
-bgit repos
+bgit repos mine
 bgit status
 ```
 

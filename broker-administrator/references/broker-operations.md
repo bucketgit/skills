@@ -6,7 +6,7 @@
 bgit whoami
 bgit admin repo list
 bgit admin repo info
-bgit repos
+bgit repos mine
 ```
 
 Check broker version and capabilities before diagnosing permission failures.
