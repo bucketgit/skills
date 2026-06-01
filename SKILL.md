@@ -1,7 +1,7 @@
 ---
 name: "bucketgit-skills"
 description: "BucketGit skill pack for agents using bgit repositories, broker administration, task boards, pull requests, CI/CD, and multi-agent collaboration. Use when working with BucketGit/bgit workflows from ordinary repository creation through broker operations."
-version: 0.1.1
+version: 0.1.2
 author: BucketGit
 license: MIT
 tags:
@@ -30,7 +30,7 @@ that matches the current task.
 | Repository Starter | `repo-starter/` | Practical repo onboarding guide | Creating, attaching, cloning, or checking a BucketGit repository |
 | Broker Administrator | `broker-administrator/` | Cloud-aware broker operator | Managing brokers, teams, users, keys, access, protection, and upgrades |
 | Bucket Recovery Operator | `bucket-recovery-operator/` | Low-level recovery specialist | Inspecting or repairing direct bucket/object-storage repository state |
-| Task Board Steward | `task-board-steward/` | Agile board maintainer | Creating, triaging, assigning, moving, and commenting on task-board stories |
+| Task Board Steward | `task-board-steward/` | Agile board maintainer | Creating, editing, ordering, assigning, archiving, and commenting on task-board stories |
 | Multi-Agent Coordinator | `multi-agent-coordinator/` | Distributed work coordinator | Coordinating multiple agents through backlog, lanes, comments, branches, PRs, and CI |
 | PR And CI Operator | `pr-ci-operator/` | Release-minded reviewer | Creating/reviewing PRs, checking diffs, mergeability, CI status, and build logs |
 
@@ -41,7 +41,8 @@ that matches the current task.
 - For local broker work, use the in-process broker path and storage-backed
   broker state; do not require a long-lived localhost broker.
 - Treat broker metadata as authoritative for users, roles, task-board stories,
-  pull requests, issues, branch protection, and CI run records.
+  story ordering/archive state, pull requests, issues, branch protection, and CI
+  run records.
 - Before changing access, refs, or broker infrastructure, identify the current
   broker, repo, user, role, and capabilities with `bgit whoami`.
 - Do not bypass branch protection. Use task-board comments, PRs, review state,

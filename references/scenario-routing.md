@@ -10,7 +10,7 @@ Load the smallest skill that covers the task:
 | "Create a repo", "init", "clone", "push failed", "who am I?" | `repo-starter/SKILL.md` |
 | "Upgrade broker", "grant access", "teams", "keys", "protection" | `broker-administrator/SKILL.md` |
 | "Direct bucket", "recovery", "repair refs", "stale ref", "bucket IAM", "janitor" | `bucket-recovery-operator/SKILL.md` |
-| "Create story", "move card", "assign", "comment", "board hygiene" | `task-board-steward/SKILL.md` |
+| "Create story", "edit story", "move card", "reorder", "assign", "archive", "comment", "board hygiene" | `task-board-steward/SKILL.md` |
 | "Coordinate agents", "split backlog", "handoff", "parallel work" | `multi-agent-coordinator/SKILL.md` |
 | "Create PR", "review diff", "merge", "CI logs", "build failed" | `pr-ci-operator/SKILL.md` |
 
