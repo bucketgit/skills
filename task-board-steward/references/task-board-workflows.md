@@ -9,6 +9,7 @@ bgit board edit BG-12 "As a maintainer, I want broker upgrades to be one command
 bgit board take BG-12
 bgit board assign BG-12 ada
 bgit board move BG-12 doing
+bgit board priority BG-12 1
 bgit board comment BG-12 "Started implementation on feature/broker-upgrade."
 bgit board archive BG-12
 bgit board list --archived
@@ -38,9 +39,19 @@ implementation rather than correcting it only in comments.
 | done | Merged, verified, or intentionally closed out |
 
 Use ordering within a lane to communicate priority. In `bgit web`, drag cards
-within the same lane to reorder them. Older brokers that do not support ordering
-may keep the previous order and surface an upgrade warning; do not manually
-encode priority into story text as a workaround.
+within the same lane to reorder them. From the CLI, use:
+
+```bash
+bgit board priority BG-12 3
+bgit board priority BG-12 1 --lane ready
+```
+
+Setting a story to priority `3` shifts the existing story at `3` and every story
+after it down by one. The broker then normalizes the lane to dense `1..N`
+positions, so do not manually reassign every story to close gaps or make room.
+Older brokers that do not support ordering may keep the previous order and
+surface an upgrade warning; do not encode priority into story text as a
+workaround.
 
 Use the story detail view in `bgit web` for the activity history when auditing
 who edited, moved, assigned, commented on, archived, or unarchived a story.
@@ -88,5 +99,6 @@ bgit board unarchive BG-12
 bgit board move BG-12 ready
 ```
 
-If archive, edit, or ordering operations report an unknown broker endpoint, keep
-the board state as-is and tell the operator to run `bgit admin broker upgrade`.
+If archive, edit, priority, or ordering operations report an unknown broker
+endpoint, keep the board state as-is and tell the operator to run
+`bgit admin broker upgrade`.

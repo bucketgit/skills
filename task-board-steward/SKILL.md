@@ -17,10 +17,12 @@ ceremony and make state transitions visible.
 4. Assign work with `bgit board take STORY_ID` when starting it, or
    `bgit board assign STORY_ID USER|unassigned` for explicit ownership changes.
 5. Move stories through `backlog`, `ready`, `doing`, `review`, and `done`.
-6. Comment on decisions, blockers, handoffs, PR links, and verification.
-7. Archive completed or intentionally closed stories once the active board
+6. Reprioritize within a lane with `bgit board priority STORY_ID ORDER` when
+   order matters outside `bgit web`.
+7. Comment on decisions, blockers, handoffs, PR links, and verification.
+8. Archive completed or intentionally closed stories once the active board
    should no longer show them.
-8. Leave viewers read-only; developers and higher can create, edit, take,
+9. Leave viewers read-only; developers and higher can create, edit, take,
    assign, move, archive, and comment.
 
 ## References
