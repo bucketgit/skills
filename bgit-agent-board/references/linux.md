@@ -2,16 +2,22 @@
 
 ## Install bgit
 
-Use the published release binary or the package method available to the user.
+Download the latest Linux binary for the machine architecture from:
+
+```text
+https://github.com/bucketgit/bgit/releases/latest/
+```
+
+Use `bgit-linux-amd64` for x86_64/amd64 systems and `bgit-linux-arm64` for
+ARM64/aarch64 systems. Install it on `PATH`, for example as
+`/usr/local/bin/bgit`, and mark it executable.
+
 After installation:
 
 ```bash
 bgit --version
 which bgit
 ```
-
-If installing manually, place the binary somewhere on `PATH`, for example
-`/usr/local/bin/bgit`, and mark it executable.
 
 ## Single-Machine Board Repo
 

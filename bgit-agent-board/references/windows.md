@@ -4,7 +4,16 @@ Use PowerShell unless the user is explicitly working in WSL.
 
 ## Install bgit
 
-Install the Windows release binary and ensure its directory is on `PATH`.
+Download the latest Windows binary for the machine architecture from:
+
+```text
+https://github.com/bucketgit/bgit/releases/latest/
+```
+
+Use `bgit-windows-amd64.exe` for x86_64/amd64 systems and
+`bgit-windows-arm64.exe` for ARM64 systems. Rename it to `bgit.exe` if needed
+and ensure its directory is on `PATH`.
+
 Validate:
 
 ```powershell
