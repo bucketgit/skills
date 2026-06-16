@@ -27,6 +27,7 @@ that matches the current task.
 | Installer | `installer/` | Cross-platform setup helper | Installing or updating the `bgit` binary on macOS, Linux, or Windows |
 | Broker Bootstrapper | `broker-bootstrapper/` | First-time cloud deploy guide | Bootstrapping a BucketGit broker on AWS or GCP |
 | Local Broker Operator | `local-broker-operator/` | Local-first repo operator | Using in-process local brokers, local filesystem repos, local-broker-backed S3/GCS repos, storage-backed ref safeguards, and local recovery |
+| Agent Board | `bgit-agent-board/` | Agent-board coordinator | Planning and coordinating agents with bgit boards backed by file://, s3://, or gs:// storage |
 | Repository Starter | `repo-starter/` | Practical repo onboarding guide | Creating, attaching, cloning, or checking a BucketGit repository |
 | Broker Administrator | `broker-administrator/` | Cloud-aware broker operator | Managing brokers, teams, users, keys, access, protection, and upgrades |
 | Bucket Recovery Operator | `bucket-recovery-operator/` | Low-level recovery specialist | Inspecting or repairing direct bucket/object-storage repository state |
@@ -40,6 +41,8 @@ that matches the current task.
   migration, or low-level inspection.
 - For local broker work, use the in-process broker path and storage-backed
   broker state; do not require a long-lived localhost broker.
+- For agent board work, choose `file://` for same-machine agents and `s3://` or
+  `gs://` when agents coordinate from different machines or locations.
 - Treat broker metadata as authoritative for users, roles, task-board stories,
   story ordering/archive state, pull requests, issues, branch protection, and CI
   run records.
